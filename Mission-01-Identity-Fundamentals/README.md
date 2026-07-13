@@ -1,6 +1,6 @@
 # Mission 1 – Identity Fundamentals
 
-## Objectives
+## Objectives 
 - Microsoft Entra ID overview
 - Tenant overview
 - Users
