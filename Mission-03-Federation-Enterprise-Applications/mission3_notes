@@ -1,0 +1,73 @@
+# Mission 3 - Federation & Enterprise Applications
+
+## Overview
+
+Mission 3 introduced the core concepts of Identity Engineering by explaining how Microsoft Entra ID authenticates users and how Enterprise Applications trust Microsoft Entra through federation.
+
+Instead of every application maintaining separate usernames and passwords, organizations centralize authentication using Microsoft Entra ID. After successful authentication, Microsoft Entra issues a security token containing claims about the user's identity. Enterprise Applications validate the token and use those claims to determine what the user is authorized to access.
+
+---
+
+# Identity Flow
+
+```
+User
+   │
+   ▼
+Microsoft Entra ID
+(Authentication)
+   │
+   ▼
+Security Token Issued
+   │
+   ▼
+Claims
+(Name, Email, Groups, Roles)
+   │
+   ▼
+Enterprise Application
+(Salesforce, ServiceNow, Workday)
+   │
+   ▼
+Authorization
+   │
+   ▼
+Application Access
+```
+
+The important lesson from this mission is understanding that Microsoft Entra performs authentication, while the Enterprise Application performs authorization.
+
+---
+
+# Authentication vs Authorization
+
+Authentication answers one question:
+
+> Who are you?
+
+Microsoft Entra verifies the user's identity through credentials, MFA, Conditional Access policies, and other security controls.
+
+Authorization answers another question:
+
+> What are you allowed to do?
+
+Enterprise Applications evaluate the claims contained in the token and determine what resources the authenticated user is permitted to access.
+
+This distinction became one of the most important concepts learned during Mission 3.
+
+---
+
+# Federation
+
+Federation establishes a trust relationship between Microsoft Entra ID and Enterprise Applications.
+
+Instead of storing passwords independently, applications rely on Microsoft Entra to authenticate users.
+
+Benefits include:
+
+- Single Sign-On (SSO)
+- Centralized Identity Management
+- Simplified User Lifecycle Management
+- Reduced Administrative Overhead
+- Stronger Security
+- Consistent Access Policies
