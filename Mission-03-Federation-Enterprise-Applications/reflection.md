@@ -1,4 +1,4 @@
-# Reflection
+# Reflection 
 
 Mission 3 marked the point where I began thinking like an Identity Engineer rather than simply supporting Microsoft 365 users.
 
